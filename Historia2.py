@@ -5,7 +5,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 import time
 
-@pytest.mark.story("Historia 2 - Llenar formulario de texto y generar captura")
+@pytest.mark.story("Historia 2")
 def test_modificar_campos_de_texto():
     chromedriver_path = "chromedriver.exe"
     chrome_options = Options()
