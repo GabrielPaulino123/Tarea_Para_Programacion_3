@@ -3,13 +3,13 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 import time
-@pytest.mark.story("Historia 1 - Navegar a una página web")
+@pytest.mark.story("Historia 1")
 def test_navegacion_basica():
 
     chromedriver_path = "chromedriver.exe"
 
     chrome_options = Options()
-    chrome_options.add_argument("--start-maximized")  # Abrir maximizado
+    chrome_options.add_argument("--start-maximized") 
 
     service = Service(chromedriver_path)
 
