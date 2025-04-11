@@ -1,0 +1,89 @@
+
+# Historias de Usuario
+
+Este archivo contiene las historias de usuario del proyecto de automatización con Selenium. Para programacionIII
+
+## HISTORIA 1 ##
+Como desarrollador,
+quiero poder ingresar a cualquier página web
+a través de su enlace directo,
+para poder verificar que Selenium está funcionando correctamente con navegación básica.
+
+Criterios de Aceptación
+El sistema debe abrir el navegador Google Chrome/cualquier navegador de forma visible (no en modo headless).
+El navegador debe redirigir correctamente a la URL indicada en el código.
+La URL debe ser accesible y cargar correctamente en menos de 10 segundos.
+Al finalizar la prueba, el navegador debe cerrarse correctamente.
+
+
+Criterios de Rechazo
+Si la URL no responde, el test debe fallar.
+Si el navegador no abre o Selenium lanza un error, el test debe fallar.
+Si no se encuentra el archivo chromedriver.exe en la raíz del proyecto, debe lanzar error inmediatamente.
+
+---
+## HISTORIA 2 ##
+
+Como desarrollador,
+quiero acceder al formulario ubicado en la URL https://www.selenium.dev/selenium/web/web-form.html
+y modificar los campos de texto y contraseña disponibles,
+para simular el llenado de un formulario y verificar que la entrada de datos se comporta como se espera.
+
+Criterios de aceptación
+La prueba debe acceder exclusivamente a la URL proporcionada, y validar que la misma se cargó correctamente.
+El campo "Text input" debe llenarse con un texto definido, y el campo "Password" debe recibir una cadena distinta.
+Tras una espera visible de 3 segundos, debe generarse una captura de pantalla llamada captura_historia2.png.
+
+Criterios de rechazo
+Si se accede a una URL distinta a la indicada, la prueba se considera fallida.
+Si alguno de los campos no puede ser llenado, la prueba debe fallar.
+Si no se genera la captura de pantalla correctamente, el caso también será inválido.
+
+---
+
+## Historia 3 ##
+Como usuario, quiero poder completar todos los campos del formulario en la página https://www.selenium.dev/selenium/web/web-form.html,
+para asegurarme de que todos los elementos de entrada aceptan datos válidos,y luego generar una captura que refleje el formulario lleno completamente.
+
+Criterios de aceptación
+La prueba debe acceder correctamente a la URL del formulario sin redirecciones.
+Todos los campos interactivos del formulario (texto, contraseña, checkbox, radio, dropdown, textarea, etc.) deben ser llenados/modificados.
+Una vez completados todos los campos, debe generarse una captura de pantalla llamada captura_historia3.png que evidencie los campos llenos.
+
+ Criterios de rechazo
+Si uno o más campos no son llenados correctamente o son omitidos, la prueba se considera inválida.
+Si la captura de pantalla no refleja claramente el formulario lleno, la ejecución debe marcarse como fallida.
+Si el script no accede a la URL específica o la página no carga correctamente, la historia será rechazada.
+
+
+
+## HISTORIA DE USUARIO 4 ##
+Como persona usuaria del sistema, deseo poder llenar todos los campos del formulario web y enviarlo correctamente presionando el botón de envío (Submit), para asegurarme de que toda la información capturada sea procesada sin errores y que los elementos interactivos del formulario funcionen adecuadamente.
+
+Criterios de Aceptación
+El usuario debe poder llenar todos los campos del formulario, incluyendo texto, contraseña, área de texto, checkbox, radio, selección desplegable, datalist, selector de fecha, selector de color y slider.
+El sistema debe permitir la selección de las opciones “Checked checkbox”, “Default checkbox”, “Checked radio” y “Default radio” correctamente antes de enviar el formulario.
+El formulario debe enviarse automáticamente al presionar el botón “Submit” después de completar todos los campos.
+
+Criterios de Rechazo
+Si algún campo obligatorio no está lleno, el formulario no debe enviarse y debe mantenerse en pantalla.
+Si el sistema no reconoce los valores seleccionados (por ejemplo, por errores de tipeo en el datalist), el envío debe fallar.
+Si alguno de los botones o elementos interactivos no responde al clic o a la acción, la prueba se considera fallida.
+
+---
+
+## HISTORIA DE USUARIO 5 ##
+Historia de usuario:
+Como usuario multitarea y dinámico, quiero poder llenar todos los campos de un formulario, consultar información en otra página (como Google) y luego regresar a mi formulario sin perder mis datos ni alterar el estado original.
+
+Criterios de aceptación adicionales:
+Se deben llenar correctamente todos los campos del formulario en la página principal de Selenium.
+En la pestaña secundaria (Google), se debe escribir “Hola buenos días” en la barra de búsqueda y hacer clic en "Buscar con Google".
+Luego, debe cerrarse esa pestaña y retornar a la pestaña original, verificando que sigue cargada.
+
+Finalmente, debe cerrarse el navegador sin errores.
+
+Criterios de rechazo adicionales:
+Si al volver a la pestaña original el formulario pierde su contenido.
+Que no se pueda realizar la navegacion del resultado en google
+Si el cierre de la pestaña de Google provoca un error o una interrupción en la prueba.

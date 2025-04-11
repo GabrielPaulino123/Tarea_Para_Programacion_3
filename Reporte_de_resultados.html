@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reporte de Historias de Usuario - Selenium</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .historia {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #2980b9;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .criterios {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        .criterios strong {
+            display: block;
+            margin-top: 10px;
+            color: #2c3e50;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        img {
+            width: 100%;
+            max-width: 600px;
+            border: 2px solid #ccc;
+            border-radius: 6px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Reporte de Historias de Usuario - Selenium</h1>
+
+<div class="historia">
+    <h2>Historia 1: Acceso a Página Web Específica</h2>
+    <p><strong>Como desarrollador</strong>, quiero poder acceder directamente a una página web específica utilizando únicamente su URL, para asegurarme de que la navegación básica funcione correctamente desde el navegador automatizado.</p>
+    <div class="criterios">
+        <strong>Criterios de aceptación:</strong>
+        <ul>
+            <li>El navegador debe abrir correctamente la URL especificada.</li>
+            <li>La URL debe coincidir exactamente con la proporcionada.</li>
+            <li>Debe tomarse una captura de pantalla de la página cargada.</li>
+        </ul>
+        <strong>Criterios de rechazo:</strong>
+        <ul>
+            <li>La URL redirecciona a otra página.</li>
+            <li>No se carga completamente la web.</li>
+            <li>La captura de pantalla no se genera correctamente.</li>
+        </ul>
+    </div>
+    <img src="captura_historia1.png" alt="Captura Historia 1">
+</div>
+
+<div class="historia">
+    <h2>Historia 2: Edición de Campos de Texto</h2>
+    <p><strong>Como usuario técnico</strong>, quiero poder ingresar texto en los campos de texto y contraseña de una página web específica, para validar que los campos aceptan entrada y responden correctamente.</p>
+    <div class="criterios">
+        <strong>Criterios de aceptación:</strong>
+        <ul>
+            <li>Solo se permite el acceso a la URL autorizada.</li>
+            <li>Se pueden llenar correctamente los campos de texto y contraseña.</li>
+            <li>Se debe generar una captura después de llenar los campos.</li>
+        </ul>
+        <strong>Criterios de rechazo:</strong>
+        <ul>
+            <li>Los campos no se llenan correctamente.</li>
+            <li>La URL es diferente a la esperada.</li>
+            <li>No se genera la captura final.</li>
+        </ul>
+    </div>
+    <img src="captura_historia2.png" alt="Captura Historia 2">
+</div>
+
+<div class="historia">
+    <h2>Historia 3: Llenado Completo del Formulario</h2>
+    <p><strong>Como evaluador de calidad</strong>, deseo completar todos los campos disponibles del formulario para verificar que el sistema puede manejar múltiples entradas correctamente y que todos los elementos interactivos funcionan.</p>
+    <div class="criterios">
+        <strong>Criterios de aceptación:</strong>
+        <ul>
+            <li>Todos los campos deben ser completados sin errores.</li>
+            <li>Debe seleccionarse un color y un rango adecuado.</li>
+            <li>Se debe capturar una imagen con el formulario completamente lleno.</li>
+        </ul>
+        <strong>Criterios de rechazo:</strong>
+        <ul>
+            <li>Algunos campos quedan vacíos.</li>
+            <li>No se puede seleccionar color o rango.</li>
+            <li>La captura de pantalla no se genera.</li>
+        </ul>
+    </div>
+    <img src="captura_historia3.png" alt="Captura Historia 3">
+</div>
+
+<div class="historia">
+    <h2>Historia 4: Envío del Formulario</h2>
+    <p><strong>Como usuario final</strong>, quiero llenar el formulario y enviarlo presionando el botón "Submit", asegurándome de que todos los datos sean procesados correctamente y se registre una evidencia de ello.</p>
+    <div class="criterios">
+        <strong>Criterios de aceptación:</strong>
+        <ul>
+            <li>Todos los campos del formulario deben estar correctamente llenos.</li>
+            <li>Los checkbox y radio deben estar seleccionados.</li>
+            <li>Se debe tomar una captura justo antes del envío.</li>
+            <li>Se debe tomar otra captura después del envío.</li>
+        </ul>
+        <strong>Criterios de rechazo:</strong>
+        <ul>
+            <li>Formulario incompleto.</li>
+            <li>Botón submit no funciona.</li>
+            <li>No hay evidencia visual del envío.</li>
+        </ul>
+    </div>
+    <img src="captura_historia4_antes_de_enviar.png" alt="Captura Historia 4 - Antes de Enviar">
+    <img src="captura_historia4_despues_de_enviar.png" alt="Captura Historia 4 - Después de Enviar">
+</div>
+
+<div class="historia">
+    <h2>Historia 5: Simulación de Múltiples Pestañas</h2>
+    <p><strong>Como analista de comportamiento del navegador</strong>, quiero simular el uso de múltiples pestañas, navegar a otra página, realizar una búsqueda, cerrarla y regresar al formulario original para verificar la estabilidad del sistema.</p>
+    <div class="criterios">
+        <strong>Criterios de aceptación:</strong>
+        <ul>
+            <li>Debe llenarse primero el formulario completo de Selenium.</li>
+            <li>Debe abrirse una nueva pestaña y realizarse una búsqueda en Google.</li>
+            <li>Al cerrarse la pestaña secundaria, debe regresar y cerrar el navegador.</li>
+            <li>Se debe tomar una captura antes de cambiar de pestaña y otra al final.</li>
+        </ul>
+        <strong>Criterios de rechazo:</strong>
+        <ul>
+            <li>No se realiza correctamente la búsqueda en Google.</li>
+            <li>La pestaña secundaria no se cierra.</li>
+            <li>No se regresa a la página original correctamente.</li>
+        </ul>
+    </div>
+    <img src="captura_historia5_formulario_lleno.png" alt="Captura Historia 5 - Formulario Lleno">
+    <img src="captura_historia5_final.png" alt="Captura Historia 5 - Final">
+</div>
+
+</body>
+</html>
